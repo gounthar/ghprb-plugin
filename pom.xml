@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.jenkins-ci.plugins</groupId>
         <artifactId>plugin</artifactId>
-        <version>3.2</version>
+        <version>4.51</version>
         <relativePath />
     </parent>
 
@@ -15,6 +15,17 @@
     <packaging>hpi</packaging>
 
     <url>https://github.com/jenkinsci/ghprb-plugin</url>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.jenkins.tools.bom</groupId>
+                <artifactId>bom-weekly</artifactId>
+                <version>2612.v3d6a_2128c0ef</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <!--
       The developers show up as current maintainers in the Jenkins wiki.
@@ -51,9 +62,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <workflow.version>1.4</workflow.version>
-        <jenkins.version>2.7</jenkins.version>
+        <jenkins.version>2.346.3</jenkins.version>
         <powermock.version>1.6.2</powermock.version>
-        <java.level>7</java.level>
         <findbugs.failOnError>false</findbugs.failOnError>
         <checkstyle.version>6.7</checkstyle.version>
         <checkstyle.plugin.version>2.17</checkstyle.plugin.version>
@@ -78,7 +88,6 @@
         <dependency>
             <groupId>org.jenkins-ci.plugins</groupId>
             <artifactId>scm-api</artifactId>
-            <version>2.1.0</version>
         </dependency>
         <dependency>
             <groupId>org.jenkins-ci</groupId>
@@ -93,7 +102,6 @@
         <dependency>
             <groupId>org.jenkins-ci.plugins</groupId>
             <artifactId>script-security</artifactId>
-            <version>1.25</version>
         </dependency>
         <dependency>
             <groupId>org.codehaus.groovy</groupId>
@@ -118,7 +126,6 @@
         <dependency>
             <groupId>org.jenkins-ci.plugins</groupId>
             <artifactId>bouncycastle-api</artifactId>
-            <version>2.16.1</version>
         </dependency>
 
         <!-- end added dependencies because of maven enforcer plugin -->
@@ -126,22 +133,18 @@
         <dependency>
             <groupId>com.coravy.hudson.plugins.github</groupId>
             <artifactId>github</artifactId>
-            <version>1.27.0</version>
         </dependency>
         <dependency>
             <groupId>org.jenkins-ci.plugins</groupId>
             <artifactId>matrix-project</artifactId>
-            <version>1.11</version>
         </dependency>
         <dependency>
             <groupId>org.jenkins-ci.plugins</groupId>
             <artifactId>github-api</artifactId>
-            <version>1.92</version>
         </dependency>
         <dependency>
             <groupId>org.jenkins-ci.plugins</groupId>
             <artifactId>git</artifactId>
-            <version>3.3.1</version>
         </dependency>
         <dependency>
             <groupId>org.jenkins-ci.plugins</groupId>
@@ -152,7 +155,6 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.13.1</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -182,7 +184,6 @@
         <dependency>
             <groupId>org.jenkins-ci.plugins</groupId>
             <artifactId>token-macro</artifactId>
-            <version>2.1</version>
             <optional>true</optional>
         </dependency>
         <dependency>
@@ -194,17 +195,14 @@
         <dependency>
             <groupId>org.jenkins-ci.plugins</groupId>
             <artifactId>credentials</artifactId>
-            <version>2.1.14</version>
         </dependency>
         <dependency>
             <groupId>org.jenkins-ci.plugins</groupId>
             <artifactId>plain-credentials</artifactId>
-            <version>1.4</version>
         </dependency>
         <dependency>
             <groupId>org.jenkins-ci.plugins</groupId>
             <artifactId>structs</artifactId>
-            <version>1.9</version>
         </dependency>
     </dependencies>
 
